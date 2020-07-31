@@ -1,4 +1,4 @@
-# Sync-FreeIPA-IRedAdmin
+# Sync-FreeIPA-IRedMail
 
 # Reference
 * [Reddit - iRedmail or MIAB](https://www.reddit.com/r/selfhosted/comments/7o5qwl/iredmail_or_miab/)
