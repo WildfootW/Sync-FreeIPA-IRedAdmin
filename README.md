@@ -8,6 +8,7 @@
     * Create / Delete
     * Enable / Disable
     * Alias email address
+        * Only match primary domain. maintain alias domain by duplicate primary domain address
     * Change password
     * Users create by FreeIPA have tag "managedbyipa"
 * Group
@@ -26,3 +27,7 @@
 * [iRedAdmin-Pro: RESTful API](https://docs.iredmail.org/iredadmin-pro.restful.api.html)
 * [iRedMail - Integrate Microsoft Active Directory for user authentication and address book](https://docs.iredmail.org/active.directory.html)
     * > iRedAdmin-Pro doesn't work with Active Directory, so if you choose to authenticate mail users against Active Directory, you have to manage mail accounts with Active Directory management tools.
+* [iRedMail Support → Invalid DN syntax (34) for user](https://forum.iredmail.org/topic2281-invalid-dn-syntax-34-for-user.html)
+    * > You can login to phpLDAPadmin with two accounts (LDAP DN), you can find them in root directory of iRedMail installation directory, e.g. /root/iRedMail-0.7.3-rc2/iRedMail.tips, includes password of them:
+    * > cn=Manager,dc=xxx,dc=xxx: This is root dn, same as root user on Linux system in OpenLDAP server.
+    * > cn=vmailadmin,dc=xxx,dc=xxx: This is a special account, used to manage mail account related LDAP data. It has read+write permissions under o=domains,dc=xxx,dc=xxx and o=domainAdmins,dc=xxx,dc=xxx.
