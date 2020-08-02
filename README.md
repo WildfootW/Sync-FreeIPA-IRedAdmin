@@ -7,7 +7,7 @@
 * User
     * Create / Delete
     * Enable / Disable
-    * Alias email address
+    * Alias email address (Cancel)
         * Only match primary domain. maintain alias domain by duplicate primary domain address
     * Change password
     * Users create by FreeIPA have tag "managedbyipa"
@@ -16,6 +16,9 @@
     * Create / Delete
     * Sync user member
 
+# requirements
+* python3
+    * ldap3
 
 # Reference
 * [Reddit - iRedmail or MIAB](https://www.reddit.com/r/selfhosted/comments/7o5qwl/iredmail_or_miab/)
@@ -31,3 +34,11 @@
     * > You can login to phpLDAPadmin with two accounts (LDAP DN), you can find them in root directory of iRedMail installation directory, e.g. /root/iRedMail-0.7.3-rc2/iRedMail.tips, includes password of them:
     * > cn=Manager,dc=xxx,dc=xxx: This is root dn, same as root user on Linux system in OpenLDAP server.
     * > cn=vmailadmin,dc=xxx,dc=xxx: This is a special account, used to manage mail account related LDAP data. It has read+write permissions under o=domains,dc=xxx,dc=xxx and o=domainAdmins,dc=xxx,dc=xxx.
+* [V4/User Life-Cycle Management](https://www.freeipa.org/page/V4/User_Life-Cycle_Management)
+* [CHAPTER 10. MANAGING USER ACCOUNTS USING THE IDM WEB UI](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_identity_management/managing-user-accounts-using-the-idm-web-ui_configuring-and-managing-idm)
+* [Re: Freeipa-users Bash script to see if user is enabled or disabled?](https://www.redhat.com/archives/freeipa-users/2014-May/msg00047.html)
+    - nothing, the attribute hasn't been set yet
+    - FALSE, the user is enabled
+    - TRUE, the user is disabled
+* [how to read attributes for given DN in ldap3 (how to search with ldap3 if no filter)](https://stackoverflow.com/questions/47665285/how-to-read-attributes-for-given-dn-in-ldap3-how-to-search-with-ldap3-if-no-fil)
+    * `search_filter= '(objectClass=*)', # required`

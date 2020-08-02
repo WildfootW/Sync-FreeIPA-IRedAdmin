@@ -12,3 +12,6 @@ bindDN = "uid=admin,cn=sysaccounts,cn=etc,dc=example,dc=com"
 bindPW = ""
 baseDN = "dc=example,dc=com"
 
+usersDN  =  "cn=users,cn=accounts," + baseDN
+groupsDN = "cn=groups,cn=accounts," + baseDN
+
