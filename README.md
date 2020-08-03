@@ -42,3 +42,10 @@
     - TRUE, the user is disabled
 * [how to read attributes for given DN in ldap3 (how to search with ldap3 if no filter)](https://stackoverflow.com/questions/47665285/how-to-read-attributes-for-given-dn-in-ldap3-how-to-search-with-ldap3-if-no-fil)
     * `search_filter= '(objectClass=*)', # required`
+* [Extending the FreeIPA Server](https://www.freeipa.org/images/5/5b/FreeIPA33-extending-freeipa.pdf)
+* [FreeIPA Directory Server](https://www.freeipa.org/page/Directory_Server)
+    * `cn=users,cn=compat,dc=example,dc=com`
+* [how to escape bracktes in search_filter? #153](https://github.com/cannatag/ldap3/issues/153)
+    * `(&(objectClass=user)(memberof=CN=AB \28UMH\29,OU=Mailverteiler,OU=MSX,OU=Adressbuch,DC=x,DC=y,DC=z))`
+* [Re: Freeipa-users Where and how are passwords stored?](https://www.redhat.com/archives/freeipa-users/2015-February/msg00178.html)
+    * > The attributes themselves are protected by the access control instructions (ACI) so only a super priviledged admin or user himself can interact with this attribute.
