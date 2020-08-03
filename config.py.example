@@ -6,12 +6,14 @@
 #   Copyleft (C) 2020 WildfootW All rights reversed.
 #
 
-hostname = ""
+hostname = "freeipa.ipa.example.com"
 hostport = 636
-bindDN = "uid=admin,cn=sysaccounts,cn=etc,dc=example,dc=com"
+bindDN = "uid=iredmail,cn=sysaccounts,cn=etc,dc=ipa,dc=example,dc=com"
 bindPW = ""
-baseDN = "dc=example,dc=com"
+baseDN = "dc=ipa,dc=example,dc=com"
 
 usersDN  =  "cn=users,cn=accounts," + baseDN
 groupsDN = "cn=groups,cn=accounts," + baseDN
+
+mailGroupDN = "cn=mail_group," + groupsDN
 

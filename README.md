@@ -1,13 +1,14 @@
 # Sync FreeIPA & IRedMail
 ###### tags: `readme`
+# Status: Cancel
 
 # Goal
 * One way from FreeIPA's to IRedMail
 * All Users & Groups should in group "mail_group"
 * User
     * Create / Delete
-    * Enable / Disable
-    * Alias email address (Cancel)
+    * Enable / Disable (Cancel. Just Create:Create. Preserve:Disable)
+    * Alias email address
         * Only match primary domain. maintain alias domain by duplicate primary domain address
     * Change password
     * Users create by FreeIPA have tag "managedbyipa"
@@ -15,6 +16,11 @@
     * As mailing list
     * Create / Delete
     * Sync user member
+
+## step
+1. Get groups and users within "mail_users" group
+2. Collect group's name, member; User's name, password hash, mail address
+3. ...
 
 # requirements
 * python3
