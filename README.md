@@ -49,3 +49,6 @@
     * `(&(objectClass=user)(memberof=CN=AB \28UMH\29,OU=Mailverteiler,OU=MSX,OU=Adressbuch,DC=x,DC=y,DC=z))`
 * [Re: Freeipa-users Where and how are passwords stored?](https://www.redhat.com/archives/freeipa-users/2015-February/msg00178.html)
     * > The attributes themselves are protected by the access control instructions (ACI) so only a super priviledged admin or user himself can interact with this attribute.
+* [Re: Freeipa-users How grant access to userPassword for System Accounts](https://www.redhat.com/archives/freeipa-users/2015-October/msg00315.html)
+    * > aci: (targetattr = "userPassword") (target = "ldap:///cn=users,cn=accounts,dc=<my>,dc=<domain>") (version 3.0;acl "Allow password read";allow (read,compare,search)(groupdn = "ldap:///<system accounts group dn>");)
+
